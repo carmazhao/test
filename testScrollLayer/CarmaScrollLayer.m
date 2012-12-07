@@ -29,6 +29,7 @@
     return layer;
 }
 
+
 -(CarmaScrollLayer *)init:(BOOL)dir {
     if ((self = [super init])) {
         m_main_layer = [CCLayerColor node];
