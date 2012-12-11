@@ -36,7 +36,7 @@
         m_main_layer.isTouchEnabled = YES;
         CGPoint _pos = CGPointMake(0, 0);
         m_main_layer.position = _pos;
-        [m_main_layer setColor:ccRED];
+        [m_main_layer setColor:ccWHITE];
         [self addChild:m_main_layer];
         
         
