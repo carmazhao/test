@@ -37,8 +37,8 @@
 -(void) onEnter
 {
 	[super onEnter];
-    CarmaScrollLayer * layer = [CarmaScrollLayer create_layer:VERTICAL_SCROLL_MODE];
-    CGPoint _pos = CGPointMake(0, 100);
+    CarmaScrollLayer * layer = [CarmaScrollLayer create_layer:HORIZON_SCROLL_MODE];
+    CGPoint _pos = CGPointMake(0, 0);
     layer.position = _pos;
     
     CCSprite * sprite1 = [CCSprite spriteWithFile:@"Icon-72.png"];

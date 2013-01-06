@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testScrollLayer/CarmaScrollLayer.m"
-         timestampString = "376573302.858575"
+         timestampString = "377087046.154617"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "228"
-         endingLineNumber = "228"
+         startingLineNumber = "249"
+         endingLineNumber = "249"
          landmarkName = "-check_bound"
          landmarkType = "5">
       </FileBreakpoint>

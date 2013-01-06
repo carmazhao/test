@@ -190,7 +190,17 @@
             return NO;
         }
         //check right bound
+        //if the elements count is small
         CGSize      _win_size = [[CCDirector sharedDirector]winSize];
+        if (m_layer_width <= _win_size.width && m_main_layer.position.x < 0) {
+            CGPoint  _target = CGPointMake(0, 0);
+            CCMoveTo * _move = [CCMoveTo actionWithDuration:0.5 position:_target];
+            CCEaseOut * _action = [CCEaseOut actionWithAction:_move rate:4];
+            [m_main_layer stopAllActions];
+            [m_main_layer runAction:_action];
+            return NO;
+        }
+        //if the elements count is big enough
         NSInteger   _rest_width = m_layer_width + m_main_layer.position.x;
         if (_rest_width < _win_size.width) {
             CGPoint     _target = CGPointMake(m_main_layer.position.x + (_win_size.width - _rest_width), m_main_layer.position.y);
@@ -211,8 +221,19 @@
             [m_main_layer runAction:_action];
             return NO;
         }
-        //check right bound
+        //check upper bound
         CGSize      _win_size = [[CCDirector sharedDirector]winSize];
+        //if the lenght is not long enough
+        if (m_layer_width <= _win_size.height && m_main_layer.position.y < 0) {
+            CGPoint  _target = CGPointMake(0, 0);
+            CCMoveTo * _move = [CCMoveTo actionWithDuration:0.5 position:_target];
+            CCEaseOut * _action = [CCEaseOut actionWithAction:_move rate:4];
+            [m_main_layer stopAllActions];
+            [m_main_layer runAction:_action];
+            return NO;
+        }
+        
+        //if the lenght is long enough
         NSInteger   _rest_height = m_layer_height + m_main_layer.position.y;
         if (_rest_height < _win_size.height) {
             CGPoint     _target = CGPointMake(m_main_layer.position.x, m_main_layer.position.y + (_win_size.height - _rest_height));
